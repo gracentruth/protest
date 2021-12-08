@@ -56,5 +56,33 @@ class Example extends StatelessWidget {
 
 /* Consumer은 하나의 build 메소드에서 Provider를 생성도하고 소비도 해야하는 상황에 사용해야한다.
 이 상황에서는 context.watch<T>(),context.read<T>()를 사용하지 못한다 */
-
-
+/*
+class ExampleApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider<Counter>(
+      create: (_) => Counter(),
+      child: MaterialApp(
+        title: 'Provider Example',
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Provider Example'),
+          ),
+          body: Center(
+            child: Consumer<Counter>( // Consumer를 사용하여 ElevatedButton을 감쌌다.
+              builder: (_, counter, __) => ElevatedButton(
+                child: Text(
+                  '현재 숫자: ${counter.count}',
+                ),
+                onPressed: () {
+                  counter.increment();
+                },
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+*/

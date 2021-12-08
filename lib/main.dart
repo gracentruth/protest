@@ -54,4 +54,7 @@ class Example extends StatelessWidget {
 }
 
 
+/* Consumer은 하나의 build 메소드에서 Provider를 생성도하고 소비도 해야하는 상황에 사용해야한다.
+이 상황에서는 context.watch<T>(),context.read<T>()를 사용하지 못한다 */
+
 
